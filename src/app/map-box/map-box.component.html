@@ -1,0 +1,17 @@
+
+<input type="text" [(ngModel)]="message" style="display: none;" >
+
+<nav id="menu">
+<a href="#" class="active" textContent="places"  (click)="ShowLayer('places',$event)">Markers </a>
+  </nav>
+
+<div class="Container">
+<div  *ngFor="let marker of markers ">
+    <button class="buttonA" (click)="flyto(marker)">{{marker.properties.icon}}</button>
+    <button  (click)="removeMarker(marker)">delete</button>
+</div>
+</div>
+<div >
+
+<div class="map" id="map" style='width: 800px; height: 800px;'></div>
+</div>
